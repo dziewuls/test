@@ -1,0 +1,171 @@
+<?php
+
+namespace testdir;
+
+use nic;
+
+class SuperNowyALgorytmTest extends TestCase
+{
+    use RefreshDatabase, TestTrait;
+
+    /**
+     * @feature supernowyalgorytmtest
+     * @scenario supernowyalgorytmtest
+     * @case SuperNowyALgorytmTest
+     */
+    public function test_create()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    /**
+     * @feature supernowyalgorytmtest
+     * @scenario supernowyalgorytmtest
+     * @case SuperNowyALgorytmTest
+     */
+    public function testCreate2()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    /**
+     * @feature supernowyalgorytmtest
+     * @scenario supernowyalgorytmtest
+     * @case SuperNowyALgorytmTest
+     * @test
+     */
+    public function testCreate3()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    /**
+     * @feature SuperNowyALgorytmTest
+     * @scenario SuperNowyALgorytmTest
+     * @case SuperNowyALgorytmTest
+     */
+      public function create4()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    /**
+     * @feature supernowyalgorytmtest
+     * @scenario supernowyalgorytmtest
+     * @case SuperNowyALgorytmTest
+     * @test
+     */
+    public function test_Create5()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    public function testCreate6PowienienUnmarked()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+
+    /**
+     * @feature supernowyalgorytmtest
+     * @scenario supernowyalgorytmtest
+     * @case SuperNowyALgorytmTest
+     * @feature tego nie powinno byc z super alg
+     * 
+     * @Test
+     */
+    public function TestCreate7TuNieWiem()
+    {
+        //Given
+        $this->createUserAndBe();
+        $request = $this->projectCreateRequest();
+
+        /* @var ProjectCreate $project_request */
+        $project_request = new ProjectCreate($request);
+        //$project_request->merge($request);
+
+        $service = $this->app->make(ProjectService::class);
+        //When
+        $project = $service->create($project_request, $this->user, $this->customer);
+
+        //Then
+        $this->assertInstanceOf(Project::class, $project);
+    }
+}
